@@ -1,0 +1,27 @@
+{
+  "name": "my-spa-website",
+  "version": "0.0.1",
+  "description": "手搓SPA",
+  "license": "ISC",
+  "author": "HKYM39",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "prod": "webpack --mode production",
+    "server": "webpack server"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "swc-loader": "^0.2.6",
+    "webpack": "^5.103.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2"
+  },
+  "dependencies": {
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
+    "react-router": "^7.10.1",
+    "react-router-dom": "^7.10.1"
+  }
+}
