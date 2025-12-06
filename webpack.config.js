@@ -1,8 +1,8 @@
 const { resolve } = require("path");
-const merge = require("webpack-merge")
+const merge = require("webpack-merge");
 const _args = require("yargs-parser")(process.argv.slice(2));
 const _mode = _args.mode || "development";
-const _mergeConfig = require(`./config/webpack.${_mode}.config`);
+const _mergeConfig = require(`./config/webpack.${_mode}.js`);
 
 const baseConfig = {
 	entry: {
@@ -21,4 +21,4 @@ const baseConfig = {
 	},
 };
 
-module.exports = merge.default(baseConfig);
+module.exports = merge.default(baseConfig, _mergeConfig);
