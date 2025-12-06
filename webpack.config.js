@@ -1,5 +1,10 @@
 const { resolve } = require("path");
-module.exports = {
+const merge = require("webpack-merge")
+const _args = require("yargs-parser")(process.argv.slice(2));
+const _mode = _args.mode || "development";
+const _mergeConfig = require(`./config/webpack.${_mode}.config`);
+
+const baseConfig = {
 	entry: {
 		main: resolve("src/index.tsx"),
 	},
@@ -15,3 +20,5 @@ module.exports = {
 		],
 	},
 };
+
+module.exports = merge.default(baseConfig);
