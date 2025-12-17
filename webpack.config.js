@@ -17,6 +17,18 @@ const baseConfig = {
 					loader: "swc-loader",
 				},
 			},
+			{
+				test: /\.css$/i,
+				use: [
+					{ loader: "style-loader" },
+					{ loader: "css-loader" },
+					{ loader: "postcss-loader" },
+				],
+			},
+			{
+				test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+				type: "asset",
+			},
 		],
 	},
 };
